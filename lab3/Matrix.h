@@ -15,12 +15,16 @@ private:
 	int* row;
 	int* previos;
 	int* next;
+	int size;
 	int head;
 	int tail;
 	int capacity;
 	int nrC;
 	int nrL;
 	int isEmpty;
+
+	void resize();
+	int FindItem(int i, int j) const;
 
 public:
 	//constructor
@@ -41,4 +45,5 @@ public:
 	//throws exception if (i,j) is not a valid position in the Matrix
 	TElem modify(int i, int j, TElem e);
 
+	~Matrix();
 };
